@@ -49,13 +49,28 @@ def parse_author_name(name_string):
     else:
         return parsed_name[0], None
 
-def write_weights(weights, novel_id, filename=None):
+def write_weights_of_novel(novel, filename=None):
+    weights = novel.calculate()
+    novel_id = novel.novel_id
+    
     cleaned_weights = [
-        '%s, %s, %d, %d' % (e[0].user_id, e[1].user_id, w.count, w.len_sum)
+        (e[0].user_id, e[1].user_id, w.count, w.len_sum)
         for e, w in weights.items()
     ]
+    cleaned_weights.sort()
+    
     if filename is None:
-        filename = '%s.csv' % novel_id
+        filename = '%s_edge.csv' % novel_id
     with open(filename, 'w+') as f:
         for w in cleaned_weights:
-            print(w, file=f)
+            print(', '.join(map(str, w)), file=f)
+
+def write_users_of_novel(novel, filename=None):
+    users = novel.involved_users
+    novel_id = novel.novel_id
+    
+    if filename is None:
+        filename = '%s_vertex.csv' % novel_id
+    with open(filename, 'w+') as f:
+        for user in users:
+            print(', '.join([str(user.rank), user.user_id, user.name]), file=f)

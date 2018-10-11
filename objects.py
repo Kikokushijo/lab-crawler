@@ -27,6 +27,11 @@ class User(object):
 
     def __hash__(self):
         return hash(self.user_id)
+    
+    def __eq__(self, that):
+        if not isinstance(that, User):
+            return False
+        return self.user_id == that.user_id
 
     def __repr__(self):
         return '<User object id=%s name=%s rank=%s>' % (self.user_id, self.name, self.rank)
@@ -135,7 +140,7 @@ class Novel(object):
         self.author = author
         self.posts = []
         self.involved_users = set()
-        self.weights = {}
+        self._weights = {}
     
     def add_post(self, post):
         self.posts.append(post)
@@ -143,19 +148,19 @@ class Novel(object):
     def _update_edges(self, author, receiver, content):
         self.involved_users.update([author, receiver])
         edge = (author, receiver)
-        old_weights = self.weights.get(edge, EdgeWeights(count=0, len_sum=0))
-        self.weights[edge] = EdgeWeights(
+        old_weights = self._weights.get(edge, EdgeWeights(count=0, len_sum=0))
+        self._weights[edge] = EdgeWeights(
             count=old_weights.count + 1, 
             len_sum=old_weights.len_sum + len(content)
         )
     
     def calculate(self):
-        if self.weights:
-            return self.weights
+        if self._weights:
+            return self._weights
         else:
             for post in self.posts:
                 for comment in post.comments:
                     self._update_edges(comment.author, post.author, comment.content)
                     for reply in comment.replies:
                         self._update_edges(reply.author, comment.author, reply.content)
-            return self.weights
+            return self._weights

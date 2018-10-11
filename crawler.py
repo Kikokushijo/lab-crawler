@@ -82,17 +82,15 @@ def get_network_of_post(post_obj):
             #     content=''
             # )
             # post.add_comment(comment)
-
-        _comment_objs = [
-            comment_obj for comment_obj in _comment_objs.findAll(
-                'li', class_='comment-wrap cf'
-            )
-        ]
+        
+        _comment_objs = _comment_objs.findAll(
+            'li', class_='comment-wrap cf'
+        )
         
         if not _comment_objs:
             break
     
-        comment_objs.extend(_comment_objs)
+        comment_objs.extend(list(_comment_objs))
 
     for comment_obj in comment_objs:
         
@@ -139,11 +137,14 @@ if __name__ == '__main__':
             post = get_network_of_post(post_obj)
             novel.add_post(post)
 
-        print('Now calculating the weights...')
-        weights = novel.calculate()
+        # print('Now calculating the weights...')
+        # weights = novel.calculate()
 
         print('Now writing the weights to file...')
-        utils.write_weights(weights, novel_id)
+        utils.write_weights_of_novel(novel)
+        
+        print('Now writing the users to file...')
+        utils.write_users_of_novel(novel)
 
         print('Finish the processing of novel_id %s...' % novel_id)
 
