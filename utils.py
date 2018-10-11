@@ -16,7 +16,6 @@ headers = {
 }
 
 def get_bsObj(url):
-
     try:
         req = session.get(url, headers=headers)
     except HTTPError as e:
@@ -28,15 +27,24 @@ def get_bsObj(url):
         return None
     return bsObj
 
-def get_thread_entry(novel_id, page_num, url_body='https://forum.qidian.com/index/%s?type=1&page=%d'):
-    
+def get_post_entry(novel_id, page_num, url_body='https://forum.qidian.com/index/%s?type=1&page=%d'):
     real_url = url_body % (novel_id, page_num)
     return get_bsObj(real_url)
 
-def get_comment_entry(thread_id, page_num, url_body='https:%s?page=%d'):
-
-    real_url = url_body % (thread_id, page_num)
+def get_comment_entry(post_id, page_num, url_body='https:%s?page=%d'):
+    real_url = url_body % (post_id, page_num)
     return get_bsObj(real_url)
 
 def parse_author_id(text):
     return text.split('/')[-1]
+
+def write_weights(weights, novel_id, filename=None):
+    cleaned_weights = [
+        '%s, %s, %d, %d' % (e[0].user_id, e[1].user_id, w.count, w.len_sum)
+        for e, w in weights.items()
+    ]
+    if filename is None:
+        filename = '%s.csv' % novel_id
+    with open(filename, 'w+') as f:
+        for w in cleaned_weights:
+            print(w, file=f)

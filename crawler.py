@@ -4,135 +4,143 @@ import requests
 import re
 
 import utils
-from objects import User, Comment, NovelComments
+from objects import User, Reply, Comment, Post, Novel
 
 # settings
-novel_ids = ['9717820404859503']
+novel_ids = ['11495791504803003']
+ranks = ['[舵主]', '[堂主]', '[护法]', '[长老]', '[掌门]', '[宗师]', '[盟主]', '[本书作者]']
+
+def get_posts_of_novel(novel_id):
+    post_prefix = '//forum.qidian.com/post/%s' % novel_id
+    post_page_num = 0
+    post_objs = []
+    
+    while True:
+        post_page_num += 1
+        post_entry = utils.get_post_entry(
+            novel_id=novel_id, 
+            page_num=post_page_num
+        )
+        _post_objs = post_entry.findAll(
+            'div', class_='post', 
+        )
+
+        _post_objs = [
+            post_obj.find(
+                'a', {
+                 'target': '_blank',
+                 'href': re.compile("^%s" % post_prefix)
+                }
+            ) for post_obj in _post_objs
+        ]
+
+        # if there is no posts in new page
+        if not _post_objs:
+            break
+        else:
+            post_objs.extend(_post_objs)
+    
+    return post_objs
+
+def get_network_of_posts(post_obj):
+    comment_page_num = 0
+    comment_objs = []
+    post = None
+    
+    while True:
+        comment_page_num += 1
+        _comment_objs = utils.get_comment_entry(
+            post_id=post_obj.attrs['href'], 
+            page_num=comment_page_num
+        )
+        _comment_objs = _comment_objs.find(
+            'div', class_='main-body fl'
+        )
+
+        # there is the author of the post
+        if comment_page_num == 1:
+
+            post_author_obj = _comment_objs.find(
+                'div', class_='post-wrap cf'
+            ).find(
+                'p', class_='auther'
+            ).a
+            
+            post_author_id = utils.parse_author_id(post_author_obj['href'])
+            post_author_name = post_author_obj.get_text()
+            
+            # TODO: parse the rank of user
+            post_author = User(
+                user_id=post_author_id, 
+                name=post_author_name, 
+                rank=None
+            )
+            
+            # TODO: parse the content of the post
+            post = Post(author=post_author, content=None)
+
+            # TODO: ask should we count the comment of the author of post?
+            # comment = Comment(
+            #     author=post_author, 
+            #     receiver=post_author, 
+            #     content=''
+            # )
+            # post.add_comment(comment)
+
+        _comment_objs = _comment_objs.findAll(
+            'li', class_='comment-wrap cf'
+        )
+        
+        if not _comment_objs:
+            break
+
+        for comment_obj in _comment_objs:
+            
+            comment_author_obj = comment_obj.find(
+                'div', class_='post'
+            ).find(
+                'p', class_='auther'
+            ).a
+            
+            comment_author_id = utils.parse_author_id(comment_author_obj['href'])
+            comment_author_name = comment_author_obj.get_text()
+            comment_content = comment_obj.find(
+                'div', class_='post'
+            ).find(
+                'p', class_='post-body'
+            ).get_text().strip()
+
+            comment_author = User(
+                user_id=comment_author_id,
+                name=comment_author_name,
+                rank=None
+            )
+
+            comment = Comment(
+                author=comment_author, 
+                content=comment_content
+            )
+
+            post.add_comment(comment)
+            
+    return post
 
 
 if __name__ == '__main__':
 
     for novel_id in novel_ids:
+        print('Now crawling the novel_id %s...' % novel_id)
+        novel = Novel(novel_id=novel_id)
+        post_objs = get_posts_of_novel(novel_id)
+        for post_obj in post_objs:
+            post = get_network_of_posts(post_obj)
+            novel.add_post(post)
 
-        thread_prefix = '//forum.qidian.com/post/%s' % novel_id
-        thread_page_num, thread_num = 0, 0
-        
-        # TODO: parse the author of novel
-        novel_network = NovelComments(
-            novel_id=novel_id,
-            author=None
-        )
+        print('Now calculating the weights...')
+        weights = novel.calculate()
 
-        while True:
+        print('Now writing the weights to file...')
+        utils.write_weights(weights, novel_id)
 
-            thread_page_num += 1
-            thread_entry = utils.get_thread_entry(
-                novel_id=novel_id, 
-                page_num=thread_page_num
-            )
-            thread_objs = thread_entry.findAll(
-                'div', class_='post', 
-            )
+        print('Finish the processing of novel_id %s...' % novel_id)
 
-            print('thread obj:', len(thread_objs))
-
-            thread_objs = [
-                thread_obj.find(
-                    'a', {
-                     'target': '_blank',
-                     'href': re.compile("^%s" % thread_prefix)
-                    }
-                ) for thread_obj in thread_objs
-            ]
-            
-            # there is no threads in new page
-            if not thread_objs:
-                break
-
-            # start reading a thread
-            for thread_obj in thread_objs:
-
-                thread_author = None
-                thread_num += 1
-
-                assert 'href' in thread_obj.attrs
-
-                comment_page_num = 0
-                while True:
-                    comment_page_num += 1
-                    thread = utils.get_comment_entry(
-                        thread_id=thread_obj.attrs['href'], 
-                        page_num=comment_page_num
-                    )
-                    main_body = thread.find(
-                        'div', class_='main-body fl'
-                    )
-
-                    # there is the author of the thread
-                    if comment_page_num == 1:
-
-                        thread_author_obj = main_body.find(
-                            'div', class_='post-wrap cf'
-                        ).find(
-                            'p', class_='auther'
-                        ).a
-                        thread_author_name = thread_author_obj.get_text()
-                        thread_author_id = utils.parse_author_id(thread_author_obj['href'])
-
-                        # TODO: parse the rank of user
-                        thread_author = User(
-                            user_id=thread_author_id, 
-                            name=thread_author_name, 
-                            rank=None
-                        )
-
-                        # TODO: ask should we count the comment of the author of thread?
-                        # comment = Comment(
-                        #     author=thread_author, 
-                        #     receiver=thread_author, 
-                        #     content=''
-                        # )
-                        # novel_network.add_comment(comment)
-
-                    comment_objs = main_body.findAll(
-                        'li', class_='comment-wrap cf'
-                    )
-                    if not comment_objs:
-                        break
-
-                    for comment_obj in comment_objs:
-                        comment_author_obj = comment_obj.find(
-                            'div', class_='post'
-                        ).find(
-                            'p', class_='auther'
-                        ).a
-                        comment_author_name = comment_author_obj.get_text()
-                        comment_author_id = utils.parse_author_id(comment_author_obj['href'])
-                        comment_content = comment_obj.find(
-                            'div', class_='post'
-                        ).find(
-                            'p', class_='post-body'
-                        ).get_text().strip()
-
-                        comment_author = User(
-                            user_id=comment_author_id,
-                            name=comment_author_name,
-                            rank=None
-                        )
-
-                        # TODO: parse the content of the comment
-                        comment = Comment(
-                            author=comment_author, 
-                            receiver=thread_author, 
-                            content=comment_content
-                        )
-
-                        novel_network.add_comment(comment)
-
-                        # print('New Comment:\n%s' % comment)
-
-                print('Has read %d comments of novel %s' % (len(novel_network.comments), novel_id))
-
-            print('Has read %d threads of novel %s' % (thread_num, novel_id))
-
-        # print(novel_network.weights)
