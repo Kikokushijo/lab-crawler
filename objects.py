@@ -153,7 +153,6 @@ class Novel(object):
         if self.weights:
             return self.weights
         else:
-            print('Now Calculating Weights...')
             for post in self.posts:
                 for comment in post.comments:
                     self._update_edges(comment.author, post.author, comment.content)

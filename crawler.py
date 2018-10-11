@@ -1,16 +1,12 @@
-from urllib.request import urlopen
-from bs4 import BeautifulSoup as BS
-import requests
 import re
 
 import utils
-from objects import User, Reply, Comment, Post, Novel
+from objects import User, Comment, Post, Novel
 
 # settings
 novel_ids = ['11495791504803003']
-ranks = ['[舵主]', '[堂主]', '[护法]', '[长老]', '[掌门]', '[宗师]', '[盟主]', '[本书作者]']
 
-def get_posts_of_novel(novel_id):
+def get_post_objs_of_novel(novel_id):
     post_prefix = '//forum.qidian.com/post/%s' % novel_id
     post_page_num = 0
     post_objs = []
@@ -42,7 +38,7 @@ def get_posts_of_novel(novel_id):
     
     return post_objs
 
-def get_network_of_posts(post_obj):
+def get_network_of_post(post_obj):
     comment_page_num = 0
     comment_objs = []
     post = None
@@ -67,13 +63,13 @@ def get_network_of_posts(post_obj):
             ).a
             
             post_author_id = utils.parse_author_id(post_author_obj['href'])
-            post_author_name = post_author_obj.get_text()
+            post_author_name, post_author_rank = \
+                utils.parse_author_name(post_author_obj.get_text())
             
-            # TODO: parse the rank of user
             post_author = User(
                 user_id=post_author_id, 
                 name=post_author_name, 
-                rank=None
+                rank=post_author_rank
             )
             
             # TODO: parse the content of the post
@@ -87,42 +83,49 @@ def get_network_of_posts(post_obj):
             # )
             # post.add_comment(comment)
 
-        _comment_objs = _comment_objs.findAll(
-            'li', class_='comment-wrap cf'
-        )
+        _comment_objs = [
+            comment_obj for comment_obj in _comment_objs.findAll(
+                'li', class_='comment-wrap cf'
+            )
+        ]
         
         if not _comment_objs:
             break
+    
+        comment_objs.extend(_comment_objs)
 
-        for comment_obj in _comment_objs:
+    for comment_obj in comment_objs:
+        
+        comment_author_obj = comment_obj.find(
+            'div', class_='post'
+        ).find(
+            'p', class_='auther'
+        ).a
+        
+        comment_author_id = utils.parse_author_id(comment_author_obj['href'])
+        comment_author_name, comment_author_rank = \
+            utils.parse_author_name(comment_author_obj.get_text())
+        comment_content = comment_obj.find(
+            'div', class_='post'
+        ).find(
+            'p', class_='post-body'
+        ).get_text().strip()
+
+        comment_author = User(
+            user_id=comment_author_id,
+            name=comment_author_name,
+            rank=comment_author_rank
+        )
+
+        comment = Comment(
+            author=comment_author, 
+            content=comment_content
+        )
+
+        post.add_comment(comment)
             
-            comment_author_obj = comment_obj.find(
-                'div', class_='post'
-            ).find(
-                'p', class_='auther'
-            ).a
-            
-            comment_author_id = utils.parse_author_id(comment_author_obj['href'])
-            comment_author_name = comment_author_obj.get_text()
-            comment_content = comment_obj.find(
-                'div', class_='post'
-            ).find(
-                'p', class_='post-body'
-            ).get_text().strip()
-
-            comment_author = User(
-                user_id=comment_author_id,
-                name=comment_author_name,
-                rank=None
-            )
-
-            comment = Comment(
-                author=comment_author, 
-                content=comment_content
-            )
-
-            post.add_comment(comment)
-            
+    # TODO: parse the dynamic reply of the comment
+    
     return post
 
 
@@ -131,9 +134,9 @@ if __name__ == '__main__':
     for novel_id in novel_ids:
         print('Now crawling the novel_id %s...' % novel_id)
         novel = Novel(novel_id=novel_id)
-        post_objs = get_posts_of_novel(novel_id)
+        post_objs = get_post_objs_of_novel(novel_id)
         for post_obj in post_objs:
-            post = get_network_of_posts(post_obj)
+            post = get_network_of_post(post_obj)
             novel.add_post(post)
 
         print('Now calculating the weights...')

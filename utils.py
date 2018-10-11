@@ -1,8 +1,7 @@
-from urllib.request import urlopen
 from bs4 import BeautifulSoup as BS
+from urllib.error import HTTPError
 
 import requests
-import re
 
 session = requests.Session()
 headers = {
@@ -18,12 +17,12 @@ headers = {
 def get_bsObj(url):
     try:
         req = session.get(url, headers=headers)
-    except HTTPError as e:
+    except HTTPError:
         return None
 
     try:
         bsObj = BS(req.text, "lxml")
-    except AttributeError as e:
+    except AttributeError:
         return None
     return bsObj
 
@@ -37,6 +36,18 @@ def get_comment_entry(post_id, page_num, url_body='https:%s?page=%d'):
 
 def parse_author_id(text):
     return text.split('/')[-1]
+
+def parse_author_name(name_string):
+    ranks = ['[舵主]', '[堂主]', '[护法]', '[长老]', '[掌门]', '[宗师]', '[盟主]', '[本书作者]']
+    parsed_name = name_string.split()
+    assert len(parsed_name) <= 2
+    
+    if len(parsed_name) == 2:
+        rank, name = parsed_name
+        assert rank in ranks
+        return name, rank
+    else:
+        return parsed_name[0], None
 
 def write_weights(weights, novel_id, filename=None):
     cleaned_weights = [
