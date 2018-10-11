@@ -38,16 +38,17 @@ def parse_author_id(text):
     return text.split('/')[-1]
 
 def parse_author_name(name_string):
-    ranks = ['[舵主]', '[堂主]', '[护法]', '[长老]', '[掌门]', '[宗师]', '[盟主]', '[本书作者]']
+    ranks = ['舵主', '堂主', '护法', '长老', '掌门', '宗师', '盟主', '本书作者']
     parsed_name = name_string.split()
     assert len(parsed_name) <= 2
     
     if len(parsed_name) == 2:
         rank, name = parsed_name
+        rank = rank[1:-1]
         assert rank in ranks
         return name, rank
     else:
-        return parsed_name[0], None
+        return parsed_name[0], '無'
 
 def write_weights_of_novel(novel, filename=None):
     weights = novel.calculate()
@@ -62,15 +63,17 @@ def write_weights_of_novel(novel, filename=None):
     if filename is None:
         filename = '%s_edge.csv' % novel_id
     with open(filename, 'w+') as f:
+        print('Source, Target, Type, Weight1, Weight2', file=f)
         for w in cleaned_weights:
-            print(', '.join(map(str, w)), file=f)
+            print(', '.join([w[0], w[1], 'Directed', str(w[2]), str(w[3])]), file=f)
 
 def write_users_of_novel(novel, filename=None):
     users = novel.involved_users
     novel_id = novel.novel_id
     
     if filename is None:
-        filename = '%s_vertex.csv' % novel_id
+        filename = '%s_node.csv' % novel_id
     with open(filename, 'w+') as f:
+        print('Id, Label, Attribute', file=f)
         for user in users:
-            print(', '.join([str(user.rank), user.user_id, user.name]), file=f)
+            print(', '.join([user.user_id, user.name, str(user.rank)]), file=f)
