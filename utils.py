@@ -50,7 +50,7 @@ def parse_author_name(name_string):
     else:
         return parsed_name[0], '無'
 
-def write_weights_of_novel(novel, filename=None):
+def write_weights_of_novel(novel, file_prefix=None, mode='w+'):
     weights = novel.calculate()
     novel_id = novel.novel_id
     
@@ -62,18 +62,18 @@ def write_weights_of_novel(novel, filename=None):
     
     if filename is None:
         filename = '%s_edge.csv' % novel_id
-    with open(filename, 'w+') as f:
+    with open(filename, mode) as f:
         print('Source, Target, Type, Weight1, Weight2', file=f)
         for w in cleaned_weights:
             print(', '.join([w[0], w[1], 'Directed', str(w[2]), str(w[3])]), file=f)
 
-def write_users_of_novel(novel, filename=None):
+def write_users_of_novel(novel, file_prefix=None, mode='w+'):
     users = novel.involved_users
     novel_id = novel.novel_id
     
     if filename is None:
         filename = '%s_node.csv' % novel_id
-    with open(filename, 'w+') as f:
+    with open(filename, mode) as f:
         print('Id, Label, Attribute', file=f)
         for user in users:
             print(', '.join([user.user_id, user.name, str(user.rank)]), file=f)

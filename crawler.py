@@ -1,10 +1,12 @@
 import re
+import time
 
 import utils
-from objects import User, Comment, Post, Novel
+from objects import User, Comment, Post, Novel, FlushNovel
 
 # settings
-novel_ids = ['11495791504803003']
+# novel_ids = ['11495791504803003', '5776840004868003']
+novel_ids = ['5776840004868003']
 
 def get_post_objs_of_novel(novel_id):
     post_prefix = '//forum.qidian.com/post/%s' % novel_id
@@ -130,21 +132,32 @@ def get_network_of_post(post_obj):
 if __name__ == '__main__':
 
     for novel_id in novel_ids:
-        print('Now crawling the novel_id %s...' % novel_id)
-        novel = Novel(novel_id=novel_id)
-        post_objs = get_post_objs_of_novel(novel_id)
-        for post_obj in post_objs:
-            post = get_network_of_post(post_obj)
-            novel.add_post(post)
-
-        # print('Now calculating the weights...')
-        # weights = novel.calculate()
-
-        print('Now writing the weights to file...')
-        utils.write_weights_of_novel(novel)
         
-        print('Now writing the users to file...')
-        utils.write_users_of_novel(novel)
+        start = time.time()
+        
+        print('Now crawling the novel_id %s...' % novel_id)
+        post_objs = get_post_objs_of_novel(novel_id)
+        post_num = len(post_objs)
+
+        if post_num <= 5000:
+            print('Due to the large amount of posts, the novel will be stored as FlushNovel')
+            novel = Novel(novel_id=novel_id)
+        else:
+            novel = FlushNovel(novel_id=novel_id)
+
+        for idx, post_obj in enumerate(post_objs):
+            post = get_network_of_post(post_obj)
+            novel.add_post(post, last=(idx == len(post_objs) - 1))
+
+        if isinstance(novel, FlushNovel):
+            print('Since the novel is FlushNovel, has written the file...')
+        else:
+            print('Now writing the weights to file...')
+            utils.write_weights_of_novel(file_prefix=novel, mode='w+')
+            
+            print('Now writing the users to file...')
+            utils.write_users_of_novel(file_prefix=novel, mode='w+')
 
         print('Finish the processing of novel_id %s...' % novel_id)
+        print('Time Elapsed: %.2f' % (time.time() - start))
 
