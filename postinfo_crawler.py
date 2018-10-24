@@ -3,9 +3,11 @@
 
 # In[ ]:
 
+import sys, pathlib
 
-novel_id = '8161510403317103'
-
+# novel_id = '8161510403317103'
+novel_id = sys.argv[1]
+pathlib.Path('data/%s' % novel_id).mkdir(parents=True, exist_ok=True) 
 
 # In[ ]:
 
@@ -110,7 +112,7 @@ print('The novel has %d page(s) of (or %d) posts!' % (page_num, len(posts_list))
 # In[ ]:
 
 
-with open('data/PostInfo-%s.csv' % (novel_id), 'w+') as f:
+with open('data/%s/PostInfo-%s.csv' % (novel_id, novel_id), 'w+') as f:
     for info in posts_list:
         print(info.author_name, info.author_id, info.post_id, sep=', ', file=f)
 

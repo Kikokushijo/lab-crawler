@@ -4,12 +4,13 @@
 # In[1]:
 
 
-novel_id = '8161510403317103'
-comment_file = 'data/CommentInfo-%s.csv' % novel_id
-cleaned_comment_file = 'data/CleanedCommentInfo-%s.csv' % novel_id
-post_file = 'data/PostInfo-%s.csv' % novel_id
-node_file = 'data/Node-%s.csv' % novel_id
-edge_file = 'data/Edge-%s.csv' % novel_id
+import sys
+# novel_id = '8161510403317103'
+novel_id = sys.argv[1]
+comment_file = 'data/%s/CommentInfo-%s.csv' % (novel_id, novel_id)
+post_file = 'data/%s/PostInfo-%s.csv' % (novel_id, novel_id)
+node_file = 'data/%s/Node-%s.csv' % (novel_id, novel_id)
+edge_file = 'data/%s/Edge-%s.csv' % (novel_id, novel_id)
 
 
 # In[2]:
@@ -45,13 +46,12 @@ with open(post_file, 'r') as f:
 has_processed_post = set()
 nodes = dict()
 edges = defaultdict(EdgeInfo)
-with open(comment_file, 'r') as f, open(cleaned_comment_file, 'w+') as g:
+with open(comment_file, 'r') as f:
     for line in f:
         try:
             author_name, author_id, post_id, *context = (line.strip()+' ').split(', ')
             context = ','.join(context)
             author_name = author_name or '_'
-            print('\t'.join([author_name, author_id, post_id, context]), file=g)
         except ValueError:
             pass
         

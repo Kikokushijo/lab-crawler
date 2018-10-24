@@ -3,8 +3,9 @@
 
 # In[ ]:
 
-
-novel_id = '8161510403317103'
+import sys
+# novel_id = '8161510403317103'
+novel_id = sys.argv[1]
 
 
 # In[ ]:
@@ -69,7 +70,7 @@ def get_comment_info(comment_obj, post_id):
     post_author_obj = comment_obj.find('p', class_='auther')
     post_author_name = post_author_obj.a.get_text()
     post_author_id = get_id_from_url(post_author_obj.a['href'])
-    content = comment_obj.find('p', class_='post-body').get_text().strip()
+    content = comment_obj.find('p', class_='post-body').get_text().strip().replace('\n', ' ')
     return CommentInfo(author_name=post_author_name, author_id=post_author_id, post_id=post_id, content=content)
 
 
@@ -96,7 +97,7 @@ def get_comments_on_page(novel_id, post_id, page_id):
 
 start = start_batch = time.time()
 comment_num = 0
-with open('data/PostInfo-%s.csv' % novel_id, 'r') as f, open('data/CommentInfo-%s.csv' % novel_id, 'w+') as g:
+with open('data/%s/PostInfo-%s.csv' % (novel_id, novel_id), 'r') as f, open('data/%s/CommentInfo-%s.csv' % (novel_id, novel_id), 'w+') as g:
     for post_index, line in enumerate(f, 1):
         comments_list = []
         post_author_name, post_author_id, post_id = line.strip().split(', ')
