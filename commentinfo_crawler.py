@@ -98,6 +98,7 @@ def get_comments_on_page(novel_id, post_id, page_id):
 start = start_batch = time.time()
 comment_num = 0
 with open('data/%s/PostInfo-%s.csv' % (novel_id, novel_id), 'r') as f, open('data/%s/CommentInfo-%s.csv' % (novel_id, novel_id), 'w+') as g:
+    print('START', file=g)
     for post_index, line in enumerate(f, 1):
         comments_list = []
         post_author_name, post_author_id, post_id = line.strip().split(', ')
@@ -117,6 +118,7 @@ with open('data/%s/PostInfo-%s.csv' % (novel_id, novel_id), 'r') as f, open('dat
             print('Has read comments of %d posts' % post_index)
             print('Use %.6fs during these 10 posts...' % (time.time()-start_batch))
             start_batch = time.time()
+    print('END', file=g)
 
 print('The novel has %d comments!' % comment_num)
 

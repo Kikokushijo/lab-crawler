@@ -47,7 +47,10 @@ has_processed_post = set()
 nodes = dict()
 edges = defaultdict(EdgeInfo)
 with open(comment_file, 'r') as f:
+    assert f.readline().strip() == 'START'
     for line in f:
+        if line.strip() == 'END':
+            break
         try:
             author_name, author_id, post_id, *context = (line.strip()+' ').split(', ')
             context = ','.join(context)
