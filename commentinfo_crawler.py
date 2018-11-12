@@ -70,7 +70,8 @@ def get_comment_info(comment_obj, post_id):
     post_author_obj = comment_obj.find('p', class_='auther')
     post_author_name = post_author_obj.a.get_text()
     post_author_id = get_id_from_url(post_author_obj.a['href'])
-    content = comment_obj.find('p', class_='post-body').get_text().strip().replace('\n', ' ')
+    content = comment_obj.find('p', class_='post-body').get_text().strip()
+    content = content.replace('\n', '').replace('\r', '').replace(',', '')
     return CommentInfo(author_name=post_author_name, author_id=post_author_id, post_id=post_id, content=content)
 
 
@@ -121,4 +122,3 @@ with open('data/%s/PostInfo-%s.csv' % (novel_id, novel_id), 'r') as f, open('dat
     print('END', file=g)
 
 print('The novel has %d comments!' % comment_num)
-

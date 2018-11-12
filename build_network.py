@@ -67,7 +67,7 @@ with open(comment_file, 'r') as f:
             nodes[author_id] = NodeInfo(label=label, attribute=attribute)
         
         if post_id not in has_processed_post:
-            assert post2author[post_id] == author_id
+            # assert post2author[post_id] == author_id
             has_processed_post.add(post_id)
         else:
             source = author_id
