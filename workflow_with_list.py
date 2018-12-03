@@ -1,5 +1,6 @@
 import sys, os
 from argparse import ArgumentParser
+import concurrent.futures
 
 novel_ids = []
 with open('preprocess/index_list.txt', 'r') as f:
@@ -9,16 +10,30 @@ with open('preprocess/index_list.txt', 'r') as f:
 parser = ArgumentParser()
 parser.add_argument('-s', '--start-with', help='index to start with', type=int, default=0)
 parser.add_argument('-e', '--end-with', help='index to end with', type=int, default=len(novel_ids))
+parser.add_argument('-t', '--threads', help='number of threads', type=int, default=1)
+
 args = parser.parse_args()
 start_with = args.start_with
 end_with = args.end_with
+n_workers = args.threads
+assert start_with < end_with
 print('Start crawling the novel_ids[%d:%d]' % (start_with, end_with))
 
+novel_ids = novel_ids[start_with:end_with]
+
+def process_with_script(novel_id):
+    return os.system('./workflow.sh %s' % novel_id)
+
 with open('errorlist.txt', 'w+') as f:
-    for idx, novel_id in enumerate(novel_ids[start_with:end_with], start_with):
-        print('Now doing process on the %d-th novel with novel_id = %s' % (idx, novel_id))
-        res = os.system('./workflow.sh %s' % novel_id)
-        if res:
-            print('Error occurs when doing process on novel_id = %s' % (novel_id))
-            print(novel_id, file=f)
-            continue
+    with concurrent.futures.ThreadPoolExecutor(max_workers=n_workers) as executor:
+        future_to_nid = {executor.submit(process_with_script, nid): nid for nid in novel_ids}
+        for future in concurrent.futures.as_completed(future_to_nid):
+            nid = future_to_nid[future]
+            try:
+                result = future.result()
+            except Execption as exc:
+                print('%r generated an exception: %s' % (nid, exc))
+            else:
+                if result:
+                    print('Error occurs when doing process on novel_id = %s' % (nid))
+                    print(nid, file=f)
