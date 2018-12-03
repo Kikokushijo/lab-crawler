@@ -36,7 +36,7 @@ from collections import defaultdict
 post2author = dict()
 with open(post_file, 'r') as f:
     for line in f:
-        author_name, author_id, post_id = line.strip().split(', ')
+        author_name, author_id, post_id = line.strip().split('\t')
         post2author[post_id] = author_id
 
 
@@ -52,9 +52,9 @@ with open(comment_file, 'r') as f:
         if line.strip() == 'END':
             break
         try:
-            author_name, author_id, post_id, *context = (line.strip()+' ').split(', ')
-            context = ','.join(context)
-            author_name = author_name or '_'
+            author_name, author_id, post_id, *context = (line.strip()).split('\t')
+            context = '\t'.join(context)
+            author_name = author_name or '--NAN--'
         except ValueError:
             pass
         
@@ -100,7 +100,7 @@ for keypair, edge in edges.items():
 with open(node_file, 'w+') as f:
     print('Id, Label, Attribute', file=f)
     for node_id, node in nodes.items():
-        print(node_id, node.label, node.attribute, sep=', ', file=f)
+        print(node_id, node.label, node.attribute, sep='\t', file=f)
 
 
 # In[9]:
@@ -109,5 +109,5 @@ with open(node_file, 'w+') as f:
 with open(edge_file, 'w+') as f:
     print('Source, Target, Type, Appearance, TextLength', file=f)
     for e in realEdges:
-        print(e.source, e.target, e.edgeInfo.type, e.edgeInfo.appearance, e.edgeInfo.textLength, sep=', ', file=f)
+        print(e.source, e.target, e.edgeInfo.type, e.edgeInfo.appearance, e.edgeInfo.textLength, sep='\t', file=f)
 

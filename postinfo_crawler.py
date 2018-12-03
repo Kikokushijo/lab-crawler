@@ -70,7 +70,7 @@ def get_id_from_url(url):
 def get_post_info(post_obj):
     post_prefix = '//forum.qidian.com/post/'
     author_obj = post_obj.find('p', class_='post-auther').find('a')
-    author_name = author_obj.get_text()
+    author_name = author_obj.get_text().replace('\t', '') or '--NAN--'
     author_id = get_id_from_url(author_obj['href'])
     post_entry_obj = post_obj.find('p', class_=re.compile('^post\-(?!auther)')).find('a', target='_blank')
     post_id = get_id_from_url(post_entry_obj['href'])
@@ -114,5 +114,5 @@ print('The novel has %d page(s) of (or %d) posts!' % (page_num, len(posts_list))
 
 with open('data/%s/PostInfo-%s.csv' % (novel_id, novel_id), 'w+') as f:
     for info in posts_list:
-        print(info.author_name, info.author_id, info.post_id, sep=', ', file=f)
+        print(info.author_name, info.author_id, info.post_id, sep='\t', file=f)
 

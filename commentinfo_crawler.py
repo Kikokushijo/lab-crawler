@@ -68,10 +68,10 @@ def get_id_from_url(url):
 
 def get_comment_info(comment_obj, post_id):
     post_author_obj = comment_obj.find('p', class_='auther')
-    post_author_name = post_author_obj.a.get_text()
+    post_author_name = post_author_obj.a.get_text().replace('\t', '') or '--NAN--'
     post_author_id = get_id_from_url(post_author_obj.a['href'])
     content = comment_obj.find('p', class_='post-body').get_text().strip()
-    content = content.replace('\n', '').replace('\r', '').replace(',', '')
+    content = content.replace('\n', '').replace('\r', '').replace('\t', '')
     return CommentInfo(author_name=post_author_name, author_id=post_author_id, post_id=post_id, content=content)
 
 
@@ -102,7 +102,7 @@ with open('data/%s/PostInfo-%s.csv' % (novel_id, novel_id), 'r') as f, open('dat
     print('START', file=g)
     for post_index, line in enumerate(f, 1):
         comments_list = []
-        post_author_name, post_author_id, post_id = line.strip().split(', ')
+        post_author_name, post_author_id, post_id = line.strip().split('\t')
         page_num = 0
         while True:
             comments = get_comments_on_page(novel_id, post_id, page_num + 1)
@@ -112,7 +112,7 @@ with open('data/%s/PostInfo-%s.csv' % (novel_id, novel_id), 'r') as f, open('dat
             else:
                 break
         for info in comments_list:
-            print(info.author_name, info.author_id, info.post_id, info.content, sep=', ', file=g)
+            print(info.author_name, info.author_id, info.post_id, info.content, sep='\t', file=g)
         comment_num += len(comments_list)
         
         if post_index % 10 == 0:
