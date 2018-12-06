@@ -1,0 +1,1 @@
+python3 build_network_filter.py $1 && python3 build_network.py $1

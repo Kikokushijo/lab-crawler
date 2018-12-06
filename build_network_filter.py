@@ -9,8 +9,8 @@ import sys
 novel_id = sys.argv[1]
 comment_file = 'data/%s/CommentInfo-%s.csv' % (novel_id, novel_id)
 post_file = 'data/%s/PostInfo-%s.csv' % (novel_id, novel_id)
-node_file = 'data/%s/Node-%s.csv' % (novel_id, novel_id)
-edge_file = 'data/%s/Edge-%s.csv' % (novel_id, novel_id)
+node_file = 'data/%s/Filter-Node-%s.csv' % (novel_id, novel_id)
+edge_file = 'data/%s/Filter-Edge-%s.csv' % (novel_id, novel_id)
 
 
 # In[2]:
@@ -42,6 +42,13 @@ with open(post_file, 'r') as f:
 
 # In[5]:
 
+def filter_func(source, target, context):
+    if source == target:
+        return False
+    if len(context) <= 5:
+        return False
+    return True
+
 
 has_processed_post = set()
 nodes = dict()
@@ -72,6 +79,10 @@ with open(comment_file, 'r') as f:
         else:
             source = author_id
             target = post2author[post_id]
+
+            if not filter_func(source, target, context):
+                continue
+
             oldEdgeInfo = edges[(source, target)]
             newEdgeInfo = EdgeInfo(
                 appearance=oldEdgeInfo.appearance+1, 
