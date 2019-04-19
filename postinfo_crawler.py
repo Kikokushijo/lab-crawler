@@ -34,7 +34,6 @@ headers = {
                   "Chrome/69.0.3497.92 Safari/537.36"
 }
 
-
 # In[ ]:
 
 
@@ -90,17 +89,23 @@ def get_posts_on_page(novel_id, page_id):
 
 # In[ ]:
 
-
+print('Start to crawl post info...')
 start = start_batch = time.time()
 posts_list = []
 page_num = 0
 while True:
-    posts = get_posts_on_page(novel_id, page_num + 1)
-    if posts:
-        posts_list.extend(posts)
+    try:
+        posts = get_posts_on_page(novel_id, page_num + 1)
+    except:
+        print('Error occurs on page_num=%d, novel_id=%s' % (page_num, novel_id), file=sys.stderr)
         page_num += 1
+        continue
     else:
-        break
+        if posts:
+            posts_list.extend(posts)
+            page_num += 1
+        else:
+            break
     
     if page_num % 10 == 0:
         print('Has read %d pages of post entries...' % page_num)
@@ -111,8 +116,8 @@ print('The novel has %d page(s) of (or %d) posts!' % (page_num, len(posts_list))
 
 # In[ ]:
 
-
+print('Start to write post info...')
 with open('data/%s/PostInfo-%s.csv' % (novel_id, novel_id), 'w+') as f:
     for info in posts_list:
-        print(info.author_name, info.author_id, info.post_id, sep='\t', file=f)
+        print(info.author_name, info.author_id, info.post_id, sep='\t', file=f, end='\r\n')
 
