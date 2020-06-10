@@ -1,0 +1,932 @@
+{
+    "Color, consciousness, and the isomorphism constraint": {
+        "authors": [
+            {
+                "author_name": "Stephen E. Palmer",
+                "url": "/core/search?filters%5BauthorTerms%5D=Stephen E.  Palmer&eventCode=SE-AU"
+            }
+        ],
+        "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/color-consciousness-and-the-isomorphism-constraint/1EAB7ED27EF19CAE825EFE6B71C92EF6",
+        "article_type": "Research Article",
+        "references": [],
+        "commentaries": [
+            {
+                "authors": [
+                    {
+                        "author_name": "Werner Backhaus",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Werner Backhaus&eventCode=SE-AU"
+                    }
+                ],
+                "title": "How to compare color sensations in different brains",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/how-to-compare-color-sensations-in-different-brains/DAAE4CBB3D98295D1732157EE0DC7F04",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Philip J. Benson",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Philip J. Benson&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Color: How you see it, when you don't",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/color-how-you-see-it-when-you-dont/F8527452FDED17ED33411D4AD3816084",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Ned Block",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Ned Block&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Jack and Jill have shifted spectra",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/jack-and-jill-have-shifted-spectra/8215B31F274B1E1908D4A67A4AFC4669",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Michael Bradie",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Michael Bradie&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Scaling the metaphorical brick wall",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/scaling-the-metaphorical-brick-wall/6CDC158FC3DCDB3F70554F81CA8C14FE",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Michael H. Brill",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Michael H. Brill&eventCode=SE-AU"
+                    }
+                ],
+                "title": "A wiring demon meets socialized humans and calibrated photometers",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/wiring-demon-meets-socialized-humans-and-calibrated-photometers/2BC128AAFEC837C4DCF79593136895E0",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Alex Byrne",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Alex Byrne&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Subjectivity is no barrier",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/subjectivity-is-no-barrier/EE5DA2E8A5B23025D9F72F16097A0D67",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Jonathan Cohen",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Jonathan Cohen&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Why asymmetries in color space cannot save functionalism",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/why-asymmetries-in-color-space-cannot-save-functionalism/7E5F9CC4249E6E6B157F725D0EC04794",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Daniel C. Dennett",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Daniel C. Dennett&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Intrinsic changes in experience: Swift and enormous",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/intrinsic-changes-in-experience-swift-and-enormous/C6EAAC436C8634A0E953EEDA1292D0D6",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Rebecca M. Frumkina",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Rebecca M. Frumkina&eventCode=SE-AU"
+                    }
+                ],
+                "title": "What does my eye tell your mind?",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/what-does-my-eye-tell-your-mind/EDB452AA02FFF77F2200E668DAAFC14B",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Lewis D. Griffin",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Lewis D. Griffin&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Empirical assessment of colour symmetries",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/empirical-assessment-of-colour-symmetries/103094DC583E907654B48D87493863AC",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "C. L. Hardin",
+                        "url": "/core/search?filters%5BauthorTerms%5D=C. L. Hardin&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Color relations and the power of complexity",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/color-relations-and-the-power-of-complexity/5743F97B00C2EB926080FF8982676A8C",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Bernard Harrison",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Bernard Harrison&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Logical possibility and the isomorphism constraint",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/logical-possibility-and-the-isomorphism-constraint/D7FF22DE3A17679123A21B59B2692298",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Harry Howard",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Harry Howard&eventCode=SE-AU"
+                    }
+                ],
+                "title": "If not functionalism, then what? Eliminative materialism?",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/if-not-functionalism-then-what-eliminative-materialism/B1AAB85F60153D6268E6ADAEC8000CCA",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Zoltán Jakab",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Zolt&aacute;n Jakab&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Overlooking the resources of functionalism?",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/overlooking-the-resources-of-functionalism/49C37E631B2498EF3541C7D939A308AC",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Glyn W. Humphreys",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Glyn W. Humphreys&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "M. Jane Riddoch",
+                        "url": "/core/search?filters%5BauthorTerms%5D=M. Jane Riddoch&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Disorder of colour consciousness: The view from neuropsychology",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/disorder-of-colour-consciousness-the-view-from-neuropsychology/4CC5450E6E043E460137928D6C243B71",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Paul Kay",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Paul Kay&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Asymmetries in the distribution of composite and derived basic color categories",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/asymmetries-in-the-distribution-of-composite-and-derived-basic-color-categories/7BF046A815F2B00B12E39E18B09233D9",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Karel Kranda",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Karel Kranda&eventCode=SE-AU"
+                    }
+                ],
+                "title": "The inverted colour space of vampires",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/inverted-colour-space-of-vampires/E32ADA38A48C52FCC9AD0A877BF96CED",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Gregory R. Lockhead",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Gregory R. Lockhead&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Scott A. Huettel",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Scott A. Huettel&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Isomorphisms and subjective colors",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/isomorphisms-and-subjective-colors/78618E262249922D609652B6BB4562B6",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Robert E. MacLaury",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Robert E. MacLaury&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Asymmetry among Hering primaries thwarts the Inverted spectrum argument",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/asymmetry-among-hering-primaries-thwarts-the-inverted-spectrum-argument/86F2BA0FDD3DEC5D8F26B5A458EBA735",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Bruce MacLennan",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Bruce MacLennan&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Neurophenomenological constraints and pushing back the subjectivity barrier",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/neurophenomenological-constraints-and-pushing-back-the-subjectivity-barrier/A1F1F1D83C3190B3D7B3AF3DF2811C25",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Neil Law Malcolm",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Neil Law Malcolm&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Consciousness – subject to agreement",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/consciousness-subject-to-agreement/D7338F31329F795D55B5D9E8BF7FB896",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Erik Myin",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Erik Myin&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Beyond intrinsicness and dazzling blacks",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/beyond-intrinsicness-and-dazzling-blacks/9B2F0A5146FD5346C0D1668F2CBCEBCA",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Martine Nida-Rümelin",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Martine Nida-R&uuml;melin&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Normal, pseudonormal, and color-blind vision: Cases of justified phenomenal belief",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/normal-pseudonormal-and-colorblind-vision-cases-of-justified-phenomenal-belief/4CDF7773D6C27D92B6B6D5A4413F7E0C",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Galina V. Paramei",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Galina V. Paramei&eventCode=SE-AU"
+                    }
+                ],
+                "title": "One basic or two? A rhapsody in blue",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/one-basic-or-two-a-rhapsody-in-blue/83E3A14FE7C659AC38201FEDBD1F87DD",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Gerard O'Brien",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Gerard O'Brien&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Jonathan Opie",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Jonathan Opie&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Finding a place for experience in the physical-relational structure of the brain",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/finding-a-place-for-experience-in-the-physicalrelational-structure-of-the-brain/CE2A54D13ADE4D7AFB863336EB73D635",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Michael Pauen",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Michael Pauen&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Phenomenal experience and science: Separated by a “brick wall”?",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/phenomenal-experience-and-science-separated-by-a-brick-wall/D3B3985A6B2C0E15E4DAD56C28FADEF8",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Peter W. Ross",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Peter W. Ross&eventCode=SE-AU"
+                    }
+                ],
+                "title": "An externalist approach to understanding color experience",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/an-externalist-approach-to-understanding-color-experience/A71338E573FAD761826B8C799012FEBE",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Barbara Saunders",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Barbara Saunders&eventCode=SE-AU"
+                    }
+                ],
+                "title": "One machine among many",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/one-machine-among-many/48FA1CA8DB110A56A9F1EA32D31BB65D",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Jürgen Schröder",
+                        "url": "/core/search?filters%5BauthorTerms%5D=J&uuml;rgen Schr&ouml;der&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Computation, levels of abstraction, and the intrinsic character of experience",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/computation-levels-of-abstraction-and-the-intrinsic-character-of-experience/DF8EE90133EF851D6254CA151681F4AB",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "John Smythies",
+                        "url": "/core/search?filters%5BauthorTerms%5D=John Smythies&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Consciousness and introspection: How we get to know the inner world",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/consciousness-and-introspection-how-we-get-to-know-the-inner-world/47541E2DE006A0616D5B2F385E230964",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Joseph Thomas Tolliver",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Joseph Thomas Tolliver&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Sensory holism and functionalism",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/sensory-holism-and-functionalism/E0DAED445E4D1783E768FEB386788A2E",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "J. van Brakel",
+                        "url": "/core/search?filters%5BauthorTerms%5D=J. van Brakel&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Whatever seems right to me is right",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/whatever-seems-right-to-me-is-right/6122E17D1BA3A0D492A2813C9C1E439F",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Robert Van Gulick",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Robert Van Gulick&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Out of sight but not out of mind: Isomorphism and absent qualia",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/out-of-sight-but-not-out-of-mind-isomorphism-and-absent-qualia/BBFEE3A729699F1F60E3B5F44FFF113F",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Christopher D. Viger",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Christopher D. Viger&eventCode=SE-AU"
+                    }
+                ],
+                "title": "The possibility of subisomorphic experiential differences",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/possibility-of-subisomorphic-experiential-differences/93548E37F85AA59C00FEB7A174EABA7C",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Edmond Wright",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Edmond Wright&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Isomorphism: Philosophical implications",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/isomorphism-philosophical-implications/C6056A76C8C72D5E05E6078A0DC02884",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            }
+        ]
+    },
+    "Lexical entries and rules of language: A multidisciplinary study of German inflection": {
+        "authors": [
+            {
+                "author_name": "Harald Clahsen",
+                "url": "/core/search?filters%5BauthorTerms%5D=Harald Clahsen&eventCode=SE-AU"
+            }
+        ],
+        "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/lexical-entries-and-rules-of-language-a-multidisciplinary-study-of-german-inflection/6608FA17C363432CF92BCE3322541897",
+        "article_type": "Research Article",
+        "references": [],
+        "commentaries": [
+            {
+                "authors": [
+                    {
+                        "author_name": "Heike Behrens",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Heike Behrens&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Michael Tomasello",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Michael Tomasello&eventCode=SE-AU"
+                    }
+                ],
+                "title": "And what about the Chinese?",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/and-what-about-the-chinese/7DE6F868C5B7D5529834F854FAFF4F53",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Geert Booij",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Geert Booij&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Lexical storage and regular processes",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/lexical-storage-and-regular-processes/8A2A8DD32882ACC5FA62E2BE94DEE4FE",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "James P. Blevins",
+                        "url": "/core/search?filters%5BauthorTerms%5D=James P. Blevins&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Productivity and exponence",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/productivity-and-exponence/CA22F70394C32CC61B4AE7D3A6FA3178",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Joan Bybee",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Joan Bybee&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Use impacts morphological representation",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/use-impacts-morphological-representation/6EF6541B30F97F679019702AF975D87D",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Andrew Carstairs-McCarthy",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Andrew Carstairs-McCarthy&eventCode=SE-AU"
+                    }
+                ],
+                "title": "The tension between “combinatorial” and “class-default” regularity",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/tension-between-combinatorial-and-classdefault-regularity/4C159CB3E0B3DDDF1C09F20B3128A19A",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Charles Clifton,",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Charles Clifton,&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Anne Cutler",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Anne Cutler&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "James M. McQueen",
+                        "url": "/core/search?filters%5BauthorTerms%5D=James M. McQueen&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Brit van Ooijen",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Brit van Ooijen&eventCode=SE-AU"
+                    }
+                ],
+                "title": "The processing of inflected forms",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/processing-of-inflected-forms/ACFAA0026F2A88869A94784AC2CCD2FC",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Greville G. Corbett",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Greville G. Corbett&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Investigating lexical entries and rules: A typological perspective",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/investigating-lexical-entries-and-rules-a-typological-perspective/ACFFB7A3F4D0457BF72713F0A12452C0",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Werner Deutsch",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Werner Deutsch&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Oliver Müller",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Oliver M&uuml;ller&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Chomsky's new clothes",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/chomskys-new-clothes/76DEF94FB3FB2AFA849DF1152B599C59",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Wolfgang U. Dressler",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Wolfgang U. Dressler&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Why collapse morphological concepts?",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/why-collapse-morphological-concepts/19731478296A51AAA2EB9734C905EDFA",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Etta Drews",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Etta Drews&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Pitfalls in tracking the psychological reality of lexically based and rule-based inflection",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/pitfalls-in-tracking-the-psychological-reality-of-lexically-based-and-rulebased-inflection/DB1A74AF38635985F88C054254C83042",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "David Fertig",
+                        "url": "/core/search?filters%5BauthorTerms%5D=David Fertig&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Diachronic evidence for a dual-mechanism approach to inflection",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/diachronic-evidence-for-a-dualmechanism-approach-to-inflection/3ACEE4C27B74CF967138EBA4D08B1CE0",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Peter Indefrey",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Peter Indefrey&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Some problems with the lexical status of nondefault inflection",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/some-problems-with-the-lexical-status-of-nondefault-inflection/A8E55803D403B6EDF003B336AC8F7E5E",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Ulrike Hahn",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Ulrike Hahn&eventCode=SE-AU"
+                    }
+                ],
+                "title": "The dual-route account of German: Where it is not a schema theory, it is probably wrong",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/dualroute-account-of-german-where-it-is-not-a-schema-theory-it-is-probably-wrong/5056D575B73593ADD4A821096D5DD2E7",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Dirk P. Janssen",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Dirk P. Janssen&eventCode=SE-AU"
+                    }
+                ],
+                "title": "The place of analogy in Minimalist Morphology and the irregularity of regular forms",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/place-of-analogy-in-minimalist-morphology-and-the-irregularity-of-regular-forms/68A136A0CCCF73316D49B35002AA132A",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Marc F. Joanisse",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Marc F. Joanisse&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Todd R. Haskell",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Todd R. Haskell&eventCode=SE-AU"
+                    }
+                ],
+                "title": "The dual-mechanism model of inflectional morphology: A connectionist critique",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/dualmechanism-model-of-inflectional-morphology-a-connectionist-critique/0556131BF6D7D7F4223D263B5416EEA8",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Paul J. M. Jorion",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Paul J. M. Jorion&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Syntax, or, the embryogenesis of meaning",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/syntax-or-the-embryogenesis-of-meaning/1AECFDA50E184A4165B7B45F7F7E2231",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "David Lightfoot",
+                        "url": "/core/search?filters%5BauthorTerms%5D=David Lightfoot&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Atomic lexical entries",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/atomic-lexical-entries/521229C0E7BEDF34EBFF47567BBDD1FA",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Alessandro Laudanna",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Alessandro Laudanna&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Regular versus irregular inflection: A question of levels",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/regular-versus-irregular-inflection-a-question-of-levels/5DAEDC0233DC8882237AE80B1ADCB10A",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Ágnes Lukács",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Ágnes Luk&aacute;cs&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Csaba Pléh",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Csaba Pléh&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Hungarian cross-modal priming and treatment of nonsense words supports the dual-process hypothesis",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/hungarian-crossmodal-priming-and-treatment-of-nonsense-words-supports-the-dualprocess-hypothesis/0E9F433FDDCDDC9B7A76CA61AAB245CE",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Thomas F. Münte",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Thomas F. M&uuml;nte&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Antoni Rodriguez-Fornells",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Antoni Rodriguez-Fornells&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Marta Kutas",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Marta Kutas&eventCode=SE-AU"
+                    }
+                ],
+                "title": "One, two, or many mechanisms? The brain's processing of complex words",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/one-two-or-many-mechanisms-the-brains-processing-of-complex-words/9195F83B93F6CCD1EF72DB30E2E2B3F5",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Brigitte Nerlich",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Brigitte Nerlich&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "David D. Clarke",
+                        "url": "/core/search?filters%5BauthorTerms%5D=David D. Clarke&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Are rules and entries enough? Historical reflections on a longstanding controversy",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/are-rules-and-entries-enough-historical-reflections-on-a-longstanding-controversy/CA5DEA9C28B60DCFF6A98009C655B0D3",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Margherita Orsolini",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Margherita Orsolini&eventCode=SE-AU"
+                    }
+                ],
+                "title": "On the cross-linguistic validity of a dual-mechanism model",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/on-the-crosslinguistic-validity-of-a-dualmechanism-model/82CF3F2739F3641324A6144D91F99D76",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Friedemann Pulvermüller",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Friedemann Pulverm&uuml;ller&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Please mind the brain, and brain the mind!",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/please-mind-the-brain-and-brain-the-mind/3A95431E2330B17A93A6D28AB7A4FC77",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Lynn Santelmann",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Lynn Santelmann&eventCode=SE-AU"
+                    }
+                ],
+                "title": "The power of cross-linguistic analysis: A key tool for developing explanatory models of human language",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/power-of-crosslinguistic-analysis-a-key-tool-for-developing-explanatory-models-of-human-language/574B937389C01580058A0FDB5658B07E",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Helmut Schnelle",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Helmut Schnelle&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Rules or neural networks?",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/rules-or-neural-networks/5605B2ABD01F8FDB34B9630CB17D3DED",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Joan Sereno",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Joan Sereno&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Pienie Zwitserlood",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Pienie Zwitserlood&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Allard Jongman",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Allard Jongman&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Entries and operations: The great divide and the pitfalls of form frequency",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/entries-and-operations-the-great-divide-and-the-pitfalls-of-form-frequency/A1C33440A7E162FE0F9AD300EE61DF6A",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Robert Schreuder",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Robert Schreuder&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Nivja de Jong",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Nivja de Jong&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Andrea Krott",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Andrea Krott&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Harald Baayen",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Harald Baayen&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Rules and rote: Beyond the linguistic either-or fallacy",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/rules-and-rote-beyond-the-linguistic-eitheror-fallacy/0E289002FECA931175B256D89D44227B",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Andrew Spencer",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Andrew Spencer&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Inflectional classes, defaults, and syncretisms",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/inflectional-classes-defaults-and-syncretisms/606A51454BE05CD638214A652106D8D4",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Joseph Paul Stemberger",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Joseph Paul Stemberger&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Frequency determines defaults in German: Default perfect -t versus irregular plural -s",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/frequency-determines-defaults-in-german-default-perfect-t-versus-irregular-plural-s/62BC51E07436388DB5849D30A1B3153B",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Michael T. Ullman",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Michael T. Ullman&eventCode=SE-AU"
+                    }
+                ],
+                "title": "The functional neuroanatomy of inflectional morphology",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/functional-neuroanatomy-of-inflectional-morphology/40F8347A11D1FE66CB83AAF1FA4F85B1",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Gert Westermann",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Gert Westermann&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Single mechanism but not single route: Learning verb inflections in constructivist neural networks",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/single-mechanism-but-not-single-route-learning-verb-inflections-in-constructivist-neural-networks/081D411A72569B9EF21B1CBF2F9738F9",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Richard Wiese",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Richard Wiese&eventCode=SE-AU"
+                    }
+                ],
+                "title": "On default rules and other rules",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/on-default-rules-and-other-rules/653F1ACEA69718F3F08DADD799660316",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Dieter Wunderlich",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Dieter Wunderlich&eventCode=SE-AU"
+                    }
+                ],
+                "title": "German noun plural reconsidered",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/german-noun-plural-reconsidered/0DFB6E7F1219E9582119CAB840DD1402",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            },
+            {
+                "authors": [
+                    {
+                        "author_name": "Marco Zorzi",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Marco Zorzi&eventCode=SE-AU"
+                    },
+                    {
+                        "author_name": "Gabriella Vigliocco",
+                        "url": "/core/search?filters%5BauthorTerms%5D=Gabriella Vigliocco&eventCode=SE-AU"
+                    }
+                ],
+                "title": "Dissociation between regular and irregular in connectionist architectures: Two processes, but still no special linguistic rules",
+                "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/dissociation-between-regular-and-irregular-in-connectionist-architectures-two-processes-but-still-no-special-linguistic-rules/641E91ACB505A05D985F26A3758A27C7",
+                "article_type": "Open Peer Commentary",
+                "references": []
+            }
+        ]
+    }
+}
